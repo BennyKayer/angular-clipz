@@ -17,11 +17,18 @@ export class ModalService {
     this.modals.push({ id, visible: false });
   }
 
-  isModalOpen() {
-    return true;
+  isModalOpen(id: IModal['id']): boolean {
+    return !!this.getModalById(id)?.visible;
   }
 
-  toggleModal() {
-    // this.visible = !this.visible;
+  getModalById(id: IModal['id']): IModal | undefined {
+    return this.modals.find((el) => el.id === id);
+  }
+
+  toggleModal(id: IModal['id']) {
+    const modal = this.getModalById(id);
+    if (modal) {
+      modal.visible = !modal.visible;
+    }
   }
 }
