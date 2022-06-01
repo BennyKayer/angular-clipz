@@ -17,6 +17,10 @@ export class ModalService {
     this.modals.push({ id, visible: false });
   }
 
+  unregister(id: IModal['id']) {
+    this.modals = this.modals.filter((el) => el.id !== id);
+  }
+
   isModalOpen(id: IModal['id']): boolean {
     return !!this.getModalById(id)?.visible;
   }
