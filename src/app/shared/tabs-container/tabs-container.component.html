@@ -1,6 +1,6 @@
 <!-- Tabs -->
 <ul class="flex flex-wrap mb-4">
-  <li class="flex-auto text-center">
+  <li class="flex-auto text-center" *ngFor="let tab of tabs">
     <a
       class="
         block
@@ -13,12 +13,7 @@
         bg-indigo-400
       "
       href="#"
-      >Login</a
-    >
-  </li>
-  <li class="flex-auto text-center">
-    <a class="block rounded py-3 px-4 transition hover:text-indigo-400" href="#"
-      >Register</a
+      >{{ tab.tabTitle }}</a
     >
   </li>
 </ul>
