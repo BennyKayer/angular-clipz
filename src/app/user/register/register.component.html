@@ -1,5 +1,5 @@
 <!-- Registration Form -->
-<form>
+<form [formGroup]="registerForm">
   <!-- Name -->
   <div class="mb-3">
     <label class="inline-block mb-2">Name</label>
@@ -20,6 +20,7 @@
         focus:border-indigo-400
       "
       placeholder="Enter Name"
+      formControlName="name"
     />
   </div>
   <!-- Email -->
