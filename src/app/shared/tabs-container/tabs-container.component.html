@@ -14,6 +14,10 @@
       "
       href="#"
       (click)="selectTab(tab)"
+      [ngClass]="{
+        'hover:text-indigo-400': !tab.active,
+        'hover:text-white text-white bg-indigo-400': tab.active
+      }"
       >{{ tab.tabTitle }}</a
     >
   </li>
