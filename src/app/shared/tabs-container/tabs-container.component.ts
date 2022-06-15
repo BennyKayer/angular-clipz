@@ -29,5 +29,8 @@ export class TabsContainerComponent implements AfterContentInit {
     this.tabs.forEach((tab) => (tab.active = false));
 
     tab.active = true;
+
+    // === event.preventDefault
+    return false;
   }
 }
