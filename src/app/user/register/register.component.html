@@ -22,6 +22,9 @@
       placeholder="Enter Name"
       formControlName="name"
     />
+    <p>{{ registerForm.controls.name?.errors | json }}</p>
+    <!-- Alternative -->
+    <!-- <p>{{ registerForm.get("name")?.errors | json }}</p> -->
   </div>
   <!-- Email -->
   <div class="mb-3">
