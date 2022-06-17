@@ -17,7 +17,7 @@
   [placeholder]="placeholder"
   [formControl]="control"
   [mask]="format"
-  [dropSpecialCharacters]="false"
+  [dropSpecialCharacters]="true"
 />
 <ng-container *ngIf="control.touched && control.dirty">
   <p *ngIf="control.errors?.pattern" class="text-red-400">
