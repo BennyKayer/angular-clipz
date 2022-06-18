@@ -53,7 +53,17 @@
         focus:border-indigo-400
       "
       placeholder="Password"
+      name="password"
+      [(ngModel)]="credentials.password"
+      required
+      #password="ngModel"
     />
+    <p
+      *ngIf="password.errors && password.dirty && password.touched"
+      class="text-red-400"
+    >
+      Password is invalid
+    </p>
   </div>
   <button
     type="submit"
